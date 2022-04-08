@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "WVcIkrVt81kU7MfNSNl0YX7sgbaInmi1L2YSNaRzqEWi4zCQtadkuxz2ofgpalt2LTnJRg7lOxyr/AAeTE5H9A==",
+  "success": true,
+  "projectFilePath": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/FullStackApi.csproj",
+  "expectedPackageFiles": [
+    "/Users/saadjanjuaa/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/saadjanjuaa/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/saadjanjuaa/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/Users/saadjanjuaa/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/Users/saadjanjuaa/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/Users/saadjanjuaa/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
