@@ -15,4 +15,14 @@ public class CompanyController : ControllerBase
     {
         _context = context;
     }
+
+
+    // HENTE ALLE COMPANIES
+    [HttpGet]
+    public async Task<ActionResult<List<Company>>> GetCompanies()
+    {
+        List<Company> companies = await _context.Companies.ToListAsync();
+        return companies;
+    }
+    
 }

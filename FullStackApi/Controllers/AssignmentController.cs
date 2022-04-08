@@ -15,4 +15,14 @@ public class AssignmentController : ControllerBase
     {
         _context = context;
     }
+
+
+    // HENTE ALLE ASSIGNMENTS
+    [HttpGet]
+    public async Task<ActionResult<List<Assignment>>> GetAssignments()
+    {
+        List<Assignment> assignments = await _context.Assignments.ToListAsync();
+        return assignments;
+    }
+
 }

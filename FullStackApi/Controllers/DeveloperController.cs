@@ -15,4 +15,13 @@ public class DeveloperController : ControllerBase
     {
         _context = context;
     }
+
+
+    // HENTE ALLE DEVELOPERS
+    [HttpGet]
+    public async Task<ActionResult<List<Developer>>> GetDevelopers()
+    {
+        List<Developer> developers = await _context.Developers.ToListAsync();
+        return developers;
+    }
 }

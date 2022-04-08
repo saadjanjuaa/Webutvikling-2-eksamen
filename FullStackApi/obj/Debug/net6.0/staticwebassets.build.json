@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "ma6pfHPZ2Z8hsVIlza2l6jccqdcGJIutoSxMhEFh4wM=",
+  "Hash": "5h2+bIoptZ5TX/2gYRAPpSPuXLkU0g1s6ncEim6w2+Y=",
   "Source": "FullStackApi",
   "BasePath": "_content/FullStackApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "FullStackApi/wwwroot",
+      "Source": "FullStackApi",
+      "ContentRoot": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/",
+      "BasePath": "_content/FullStackApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/index.html",
+      "SourceId": "FullStackApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/",
+      "BasePath": "_content/FullStackApi",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/index.html"
+    }
+  ]
 }

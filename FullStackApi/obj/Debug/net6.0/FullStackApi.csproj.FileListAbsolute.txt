@@ -52,3 +52,4 @@
 /Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/obj/Debug/net6.0/FullStackApi.pdb
 /Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/obj/Debug/net6.0/FullStackApi.genruntimeconfig.cache
 /Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/obj/Debug/net6.0/ref/FullStackApi.dll
+/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/bin/Debug/net6.0/FullStackApi.staticwebassets.runtime.json
