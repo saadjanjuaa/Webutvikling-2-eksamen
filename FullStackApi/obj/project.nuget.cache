@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "6nNzWa/pd2ETNTq+fMQKYXX3mNm0n2GwDvCjfHDZJzZBup/GHN7uhnKY/A4WM1XY4AaCnjwPVqqHBV5O6ew0Mg==",
+  "dgSpecHash": "q+eUym28LfP0A+u7DeOVFvUQb0c8dfF9ZOrKE+RdZKr9UCcZ3hYYjKNxyicIYpyxPQChN/yHgcrtt0B/Hxls0w==",
   "success": true,
   "projectFilePath": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/FullStackApi.csproj",
   "expectedPackageFiles": [
+    "/Users/saadjanjuaa/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/saadjanjuaa/.nuget/packages/microsoft.data.sqlite.core/6.0.3/microsoft.data.sqlite.core.6.0.3.nupkg.sha512",
     "/Users/saadjanjuaa/.nuget/packages/microsoft.entityframeworkcore/6.0.3/microsoft.entityframeworkcore.6.0.3.nupkg.sha512",
     "/Users/saadjanjuaa/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.3/microsoft.entityframeworkcore.abstractions.6.0.3.nupkg.sha512",
     "/Users/saadjanjuaa/.nuget/packages/microsoft.entityframeworkcore.analyzers/6.0.3/microsoft.entityframeworkcore.analyzers.6.0.3.nupkg.sha512",
+    "/Users/saadjanjuaa/.nuget/packages/microsoft.entityframeworkcore.design/6.0.3/microsoft.entityframeworkcore.design.6.0.3.nupkg.sha512",
     "/Users/saadjanjuaa/.nuget/packages/microsoft.entityframeworkcore.relational/6.0.3/microsoft.entityframeworkcore.relational.6.0.3.nupkg.sha512",
     "/Users/saadjanjuaa/.nuget/packages/microsoft.entityframeworkcore.sqlite/6.0.3/microsoft.entityframeworkcore.sqlite.6.0.3.nupkg.sha512",
     "/Users/saadjanjuaa/.nuget/packages/microsoft.entityframeworkcore.sqlite.core/6.0.3/microsoft.entityframeworkcore.sqlite.core.6.0.3.nupkg.sha512",
