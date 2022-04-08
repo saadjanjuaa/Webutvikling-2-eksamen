@@ -8,7 +8,7 @@ public class Developer
     public int Id { get; set; }
     public string? Name { get; set; }
     public string? Role { get; set; }
-    public double salary { get; set; }
+    public double MonthlySalary { get; set; }
     public Boolean Junior { get; set; }
     public string? Image { get; set; }
 

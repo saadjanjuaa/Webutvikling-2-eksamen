@@ -71,14 +71,14 @@ namespace FullStackApi.Migrations
                     b.Property<bool>("Junior")
                         .HasColumnType("INTEGER");
 
+                    b.Property<double>("MonthlySalary")
+                        .HasColumnType("REAL");
+
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Role")
                         .HasColumnType("TEXT");
-
-                    b.Property<double>("salary")
-                        .HasColumnType("REAL");
 
                     b.HasKey("Id");
 

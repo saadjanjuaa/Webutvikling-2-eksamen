@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FullStackApi.Migrations
 {
     [DbContext(typeof(FullStackContext))]
-    [Migration("20220408184003_InitialCreate")]
+    [Migration("20220408184551_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -73,14 +73,14 @@ namespace FullStackApi.Migrations
                     b.Property<bool>("Junior")
                         .HasColumnType("INTEGER");
 
+                    b.Property<double>("MonthlySalary")
+                        .HasColumnType("REAL");
+
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Role")
                         .HasColumnType("TEXT");
-
-                    b.Property<double>("salary")
-                        .HasColumnType("REAL");
 
                     b.HasKey("Id");
 
