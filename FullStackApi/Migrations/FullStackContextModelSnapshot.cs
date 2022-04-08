@@ -77,6 +77,9 @@ namespace FullStackApi.Migrations
                     b.Property<string>("Role")
                         .HasColumnType("TEXT");
 
+                    b.Property<double>("salary")
+                        .HasColumnType("REAL");
+
                     b.HasKey("Id");
 
                     b.ToTable("Developers");

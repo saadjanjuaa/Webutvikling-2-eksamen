@@ -47,6 +47,7 @@ namespace FullStackApi.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: true),
                     Role = table.Column<string>(type: "TEXT", nullable: true),
+                    salary = table.Column<double>(type: "REAL", nullable: false),
                     Junior = table.Column<bool>(type: "INTEGER", nullable: false),
                     Image = table.Column<string>(type: "TEXT", nullable: true)
                 },
