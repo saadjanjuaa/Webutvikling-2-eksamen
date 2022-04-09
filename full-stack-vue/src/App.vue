@@ -1,30 +1,28 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+
+	<page-header></page-header>
+
+	<div class="container">
+		<router-view></router-view>
+	</div>
+  
 </template>
 
+
+<script>
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import PageHeader from './components/shared/PageHeader.vue'
+
+export default {
+	name: 'App',
+  components: {
+    PageHeader,
+  }
+}
+</script>
+
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
