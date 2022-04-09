@@ -1,14 +1,15 @@
 <template>
-    <nav class="navbar navbar-dark bg-dark ">
+    <nav class="navbar navbar-expand-lg navbar-light">
 
         <router-link class="navbar-brand ms-4" to="/">
-            <img src="../../assets/logo.png" width="60" height="60" alt="logo bilde. En lilla musikknote">
+            <img src="../../assets/logo.png" width="60" height="60" alt="">
             FullStack
         </router-link>
 
         <ul class="nav ms-auto me-4 ">
             <li class="nav-item"><router-link class="nav-link" to="/">Home</router-link></li> 
             <li class="nav-item"><router-link class="nav-link" to="/about">About</router-link></li>
+            <li class="nav-item"><router-link class="nav-link" to="/assignments">Assignments</router-link></li>
         </ul>
 
     </nav>
@@ -17,12 +18,16 @@
 
 <style scoped>
 
+    .navbar {
+        background-color: #e3f2fd;
+    }
+
     .nav-link {
-        color: white;
+        color: black;
     }
     
     .nav-link:hover {
-        color: gray;
+        color: rgb(98, 57, 234);
     }
 
 </style>
