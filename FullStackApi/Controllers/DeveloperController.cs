@@ -24,4 +24,17 @@ public class DeveloperController : ControllerBase
         List<Developer> developers = await _context.Developers.ToListAsync();
         return developers;
     }
+    
+
+    // HENTE DEVELOPERS UTIFRA ROLLE
+    [HttpGet]
+    [Route("[action]/{role}")]
+    public async Task<List<Developer>> GetByRole(string role)
+    {
+        List<Developer> developers = await _context.Developers.Where( _developer => _developer.Role.ToLower() == role.ToLower()).ToListAsync();
+
+        return developers;
+    }
+
+    
 }
