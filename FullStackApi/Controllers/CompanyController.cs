@@ -24,5 +24,15 @@ public class CompanyController : ControllerBase
         List<Company> companies = await _context.Companies.ToListAsync();
         return companies;
     }
+
+
+    // HENTE PÅ ID
+    [HttpGet]
+    [Route("[action]/{id}")]
+    public async Task<Company> GetById(int id)
+    {
+        Company company = await _context.Companies.FindAsync(id);
+        return company;
+    }
     
 }

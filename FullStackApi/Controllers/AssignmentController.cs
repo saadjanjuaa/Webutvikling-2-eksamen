@@ -26,6 +26,16 @@ public class AssignmentController : ControllerBase
     }
 
 
+    // HENTE PÅ ID
+    [HttpGet]
+    [Route("[action]/{id}")]
+    public async Task<Assignment> GetById(int id)
+    {
+        Assignment assignment = await _context.Assignments.FindAsync(id);
+        return assignment;
+    }
+
+
     // HENTE ASSIGNMENT UTIFRA KATEGORI
     [HttpGet]
     [Route("[action]/{category}")]

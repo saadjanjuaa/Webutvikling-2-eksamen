@@ -24,6 +24,16 @@ public class DeveloperController : ControllerBase
         List<Developer> developers = await _context.Developers.ToListAsync();
         return developers;
     }
+
+
+    // HENTE PÅ ID
+    [HttpGet]
+    [Route("[action]/{id}")]
+    public async Task<Developer> GetById(int id)
+    {
+        Developer developer = await _context.Developers.FindAsync(id);
+        return developer;
+    }
     
 
     // HENTE DEVELOPERS UTIFRA ROLLE
@@ -36,5 +46,5 @@ public class DeveloperController : ControllerBase
         return developers;
     }
 
-    
+
 }
