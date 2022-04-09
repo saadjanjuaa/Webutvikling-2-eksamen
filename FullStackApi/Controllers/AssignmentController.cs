@@ -25,4 +25,16 @@ public class AssignmentController : ControllerBase
         return assignments;
     }
 
+
+    // HENTE ASSIGNMENT UTIFRA KATEGORI
+    [HttpGet]
+    [Route("[action]/{category}")]
+    public async Task<List<Assignment>> GetByCategory(string category)
+    {
+        List<Assignment> assignments = await _context.Assignments.Where( _assignment => _assignment.Category.ToLower() == category.ToLower()).ToListAsync();
+
+        return assignments;
+    }
+    
+
 }
