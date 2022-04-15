@@ -26,13 +26,13 @@ public class DeveloperController : ControllerBase
     }
 
 
-    // HENTE PÅ ID
+    // HENTE PÅ ID BYTTE TIL NAVN??
     [HttpGet]
-    [Route("[action]/{id}")]
-    public async Task<Developer> GetById(int id)
+    [Route("[action]/{name}")]
+    public async Task<List<Developer>> GetByName(string name)
     {
-        Developer developer = await _context.Developers.FindAsync(id);
-        return developer;
+        List<Developer> developers = await _context.Developers.Where( _developer => _developer.Name.ToLower() == name.ToLower()).ToListAsync();
+        return developers;
     }
     
 
