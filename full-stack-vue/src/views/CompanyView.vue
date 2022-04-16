@@ -2,6 +2,7 @@
 
     <section>
       <search-company-item></search-company-item>
+      <add-company-item></add-company-item>
       <company-list></company-list>
     </section>
 
@@ -10,11 +11,13 @@
 <script>
 import CompanyList from '../components/companies/CompanyList.vue'
 import SearchCompanyItem from '../components/companies/SearchCompanyItem.vue'
+import AddCompanyItem from '../components/companies/AddCompanyItem.vue'
 
 export default {
   components: {
     CompanyList,
-    SearchCompanyItem
+    SearchCompanyItem,
+    AddCompanyItem
   }
 }
 </script>

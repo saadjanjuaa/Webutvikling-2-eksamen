@@ -20,10 +20,17 @@ const companyService = ( function(){
         companies.value = request.data;
     } )()
 
+    // POSTE NY FIRMA
+    const postNewCompany = async (newCompany) => {
+
+        const request = await axios.post("https://localhost:7287/api/company", newCompany);
+        companies.value.push(request.data)
+    }
+
 
     const getAll = () => companies;
 
-    return {getAll}
+    return {getAll, postNewCompany}
 
 
 }() );

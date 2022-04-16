@@ -20,9 +20,18 @@ const assignmentService = ( function(){
     } )()
 
 
+    // HENTE PÅ ID
+    const getById = async (id) => {
+        const request = await axios.get(`https://localhost:7287/api/assignment/GetById/${id}`);
+        alert(request)
+        assignments.value = "";   
+        assignments.value = request.data;
+    }
+
+
     const getAll = () => assignments;
 
-    return {getAll}
+    return {getAll, getById}
 
 
 }() );

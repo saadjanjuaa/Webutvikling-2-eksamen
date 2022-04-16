@@ -34,5 +34,17 @@ public class CompanyController : ControllerBase
         Company company = await _context.Companies.FindAsync(id);
         return company;
     }
+
+
+    // POSTE NYTT FIRMA
+    [HttpPost]
+    public async Task<ActionResult<Company>> Post(Company newCompany)
+    {
+        _context.Companies.Add(newCompany);
+
+        await _context.SaveChangesAsync();
+
+        return newCompany;
+    }
     
 }
