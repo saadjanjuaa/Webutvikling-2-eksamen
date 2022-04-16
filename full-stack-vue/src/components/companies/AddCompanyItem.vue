@@ -1,9 +1,8 @@
 <template>
-    <section>
-        <h2>Legg til nytt firma</h2>
-
-        
-        <label class="pt-3">Navn</label>
+    <section class="mt-4">
+        <h3>Legg til nytt firma</h3>
+ 
+        <label class="mt-1">Navn</label>
         <input class="form-control me-2" v-model="newName" type="text">
 
         <label class="mt-5">Telefon Nummer</label>
@@ -11,6 +10,8 @@
 
         <label class="mt-5">Internasjonalt</label>
         <input class="form-control me-2" v-model="newInternational" type="text">
+
+        <image-upload-item></image-upload-item>
 
         <button class="btn btn-outline-success mt-3" @click="postNewCompany">Lagre</button>
         
@@ -21,6 +22,7 @@
 <script>
 import { ref  } from '@vue/reactivity'
 import companyService from '../../services/companyService.js'
+import ImageUploadItem from '../shared/ImageUploadItem.vue'
 
 export default {
     setup() {
@@ -31,6 +33,12 @@ export default {
         let newPhoneNumber = ref("");
         let newInternational = ref("");
         let newInternationalBoolean = null;
+
+        let getFileName = filePath => {
+            const last = filePath.split('\\');
+            return last[last.length-1];
+        }
+
         
         const postNewCompany = async () => {
 
@@ -43,19 +51,33 @@ export default {
                 return -1
             }
 
+            let imagePath = document.getElementById("image-input").value;
+
+            
             let newCompany = {
                 name: newName.value,
                 phoneNumber: newPhoneNumber.value,
                 international: newInternationalBoolean,
-                image: "no-image.jpg"
+                image: getFileName(imagePath)
             }
 
             companyService.postNewCompany(newCompany)
 
         }
 
-        return {postNewCompany, newName, newPhoneNumber,newInternational,}
+        return {postNewCompany, newName, newPhoneNumber,newInternational}
 
     },
+    components: {
+        ImageUploadItem
+    }
 }
 </script>
+
+<style scoped>
+
+    input {
+        width: 13rem;
+    }
+    
+</style>
