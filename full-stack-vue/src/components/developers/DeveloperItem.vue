@@ -2,14 +2,14 @@
 
     <article class="col col-sm-12 col-md-6 col-lg-4 col-xl-3">
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://localhost:7287/images/snohetta.jpg" alt="">
+            <img class="card-img-top" src="https://localhost:7287/images/ole-duskwood.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">{{name}}</h5>
                 <ul>
-                    <li>{{id}}</li>
-                    <li>{{phoneNumber}}</li>
-                    <li>{{international}}</li>
-                    <li>{{image}}</li>
+                    <li>Id: {{id}}</li>
+                    <li>Rolle: {{role}}</li>
+                    <li>Månedlig lønn: {{monthlySalary}}</li>
+                    <li>Junior? {{junior}}</li>
                 </ul>
             </div>
         </div>
@@ -25,8 +25,9 @@ export default {
     props: {
         id: Number,
         name: String,
-        phoneNumber: Number,
-        international: Boolean,
+        role: String,
+        monthlySalary: Number,
+        junior: Boolean,
         image: String
     },
 }

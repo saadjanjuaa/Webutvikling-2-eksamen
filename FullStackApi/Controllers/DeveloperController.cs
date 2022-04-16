@@ -26,7 +26,7 @@ public class DeveloperController : ControllerBase
     }
 
 
-    // HENTE PÅ ID BYTTE TIL NAVN??
+    // HENTE PÅ NAVN
     [HttpGet]
     [Route("[action]/{name}")]
     public async Task<List<Developer>> GetByName(string name)

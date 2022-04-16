@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5h2+bIoptZ5TX/2gYRAPpSPuXLkU0g1s6ncEim6w2+Y=",
+  "Hash": "9ijUlSwV96cfzXDdkSlKC5XYIJJr661d0F4DfmqbKD4=",
   "Source": "FullStackApi",
   "BasePath": "_content/FullStackApi",
   "Mode": "Default",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/images/ole-duskwood.jpg",
+      "SourceId": "FullStackApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/",
+      "BasePath": "_content/FullStackApi",
+      "RelativePath": "images/ole-duskwood.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/ole-duskwood.jpg"
+    },
+    {
+      "Identity": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/images/snohetta.jpg",
+      "SourceId": "FullStackApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/",
+      "BasePath": "_content/FullStackApi",
+      "RelativePath": "images/snohetta.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/snohetta.jpg"
+    },
     {
       "Identity": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/index.html",
       "SourceId": "FullStackApi",

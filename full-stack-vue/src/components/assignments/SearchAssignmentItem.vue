@@ -1,7 +1,7 @@
 <template>
     <section class="mt-5">
 
-        <h2>Søk på id</h2>
+        <h3>Søk på id</h3>
 
         <label class="mb-1">Angi id</label>
         <div class="d-flex">
@@ -10,7 +10,7 @@
         </div>
 
 
-        <h2 class="mt-5">Søk på kategori</h2>
+        <h3 class="mt-5">Søk på kategori</h3>
 
         <label class="mb-1">Angi kategori (Design, App-utvikling)</label>
         <div class="d-flex">
