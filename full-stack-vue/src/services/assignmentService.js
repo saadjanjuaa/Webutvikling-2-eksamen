@@ -23,15 +23,27 @@ const assignmentService = ( function(){
     // HENTE PÅ ID
     const getById = async (id) => {
         const request = await axios.get(`https://localhost:7287/api/assignment/GetById/${id}`);
-        alert(request)
-        assignments.value = "";   
-        assignments.value = request.data;
+        return request.data;
+    }
+
+
+    const putAssignment = async (editedAssignment) => {
+
+        await axios.put("https://localhost:7287/api/assignment/", editedAssignment);
+
+        const temporaryArray = JSON.parse(JSON.stringify(assignments.value));
+
+        const index = temporaryArray.findIndex(assignment => parseInt(assignment.id) === parseInt(editedAssignment.id));
+
+        assignments.value[index].description = editedAssignment.description;
+        assignments.value[index].category = editedAssignment.category;
+        assignments.value[index].company = editedAssignment.company;
     }
 
 
     const getAll = () => assignments;
 
-    return {getAll, getById}
+    return {getAll, getById, putAssignment}
 
 
 }() );

@@ -45,6 +45,16 @@ public class AssignmentController : ControllerBase
 
         return assignments;
     }
+
+    // ENDRE EN ASSIGNMENT
+    [HttpPut]
+    public async Task<ActionResult<Assignment>> Put(Assignment editedAssignment)
+    {
+        _context.Entry(editedAssignment).State = EntityState.Modified;
+        await _context.SaveChangesAsync(); 
+
+        return editedAssignment;
+    }
     
 
 }
