@@ -25,4 +25,13 @@ export default {
 
 <style>
 
+@font-face {
+  font-family: circularStd;
+	src: url(@/assets/CircularStd-Medium.ttf);
+}
+
+* {
+  font-family: circularStd;
+}
+
 </style>

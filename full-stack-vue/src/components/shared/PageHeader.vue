@@ -2,8 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
 
         <router-link class="navbar-brand ms-4" to="/">
-            <img src="../../assets/logo.png" width="60" height="60" alt="">
-            FullStack
+            fullStack
         </router-link>
 
         <ul class="nav ms-auto me-4 ">
