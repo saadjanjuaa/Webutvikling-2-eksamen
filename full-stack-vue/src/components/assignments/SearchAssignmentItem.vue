@@ -3,6 +3,8 @@
 
         <h3>Søk på id</h3>
 
+        <show-all-button></show-all-button>
+
         <label class="mb-1">Angi id</label>
         <div class="d-flex">
             <input v-model="id" class="form-control me-2" type="search" placeholder="Id" aria-label="Search">
@@ -26,6 +28,7 @@
 <script>
 import { ref } from '@vue/reactivity';
 import assignmentService from "../../services/assignmentService.js"
+import ShowAllButton from '../shared/showAllButton.vue'
 
 export default {
     setup() {
@@ -40,6 +43,9 @@ export default {
 
         return {id, sea}
         
+    },
+    components: {
+        ShowAllButton
     }
 }
 </script>

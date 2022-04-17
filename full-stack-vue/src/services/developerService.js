@@ -22,12 +22,16 @@ const developerService = ( function(){
     } )()
 
 
-    // HENTE BILDER
+    // SØKE PÅ NAVN
+    const getByName = async (name) => {
+        const request = await axios.get(`https://localhost:7287/api/developer/GetByName/${name}`);
+        developers.value = request.data;
+    }
 
 
     const getAll = () => developers;
 
-    return {getAll}
+    return {getAll,getByName}
 
 
 }() );
