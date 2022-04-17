@@ -8,7 +8,6 @@
 
         <ul class="nav ms-auto me-4 ">
             <li class="nav-item"><router-link class="nav-link" to="/">Home</router-link></li> 
-            <li class="nav-item"><router-link class="nav-link" to="/about">About</router-link></li>
             <li class="nav-item"><router-link class="nav-link" to="/assignments">Oppdrag</router-link></li>
             <li class="nav-item"><router-link class="nav-link" to="/companies">Firmaer</router-link></li>
             <li class="nav-item"><router-link class="nav-link" to="/developers">Utviklere</router-link></li>
