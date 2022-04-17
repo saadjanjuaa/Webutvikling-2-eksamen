@@ -16,10 +16,9 @@
 
         <label class="mb-1">Angi rolle (Backend utvikler, Interaksjonsdesigner)</label>
         <div class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Rolle" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Søk</button>
+            <input v-model="roleToSearch" class="form-control me-2" type="search" placeholder="Rolle" aria-label="Search">
+            <button @click="searchByRole" class="btn btn-outline-success" type="submit">Søk</button>
         </div>
-
 
     </section>
 </template>
@@ -35,13 +34,20 @@ export default {
     setup() {
 
         let nameToSearch = ref("");
+        let roleToSearch = ref("");
         
         const searchByName = () => {
-            developerService.getByName(nameToSearch.value)
+
+            developerService.getByName(nameToSearch.value);
+        }
+
+        const searchByRole = () => {
+
+            developerService.getByRole(roleToSearch.value);
         }
 
 
-        return {searchByName, nameToSearch}
+        return {searchByName, nameToSearch, searchByRole, roleToSearch}
 
     },
     components: {

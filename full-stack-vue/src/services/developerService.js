@@ -28,10 +28,16 @@ const developerService = ( function(){
         developers.value = request.data;
     }
 
+    // SØKE PÅ ROLLE
+    const getByRole = async (role) => {
+        const request = await axios.get(`https://localhost:7287/api/developer/GetByRole/${role}`);
+        developers.value = request.data;
+    }
+
 
     const getAll = () => developers;
 
-    return {getAll,getByName}
+    return {getAll,getByName, getByRole}
 
 
 }() );

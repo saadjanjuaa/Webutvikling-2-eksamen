@@ -42,7 +42,6 @@ public class DeveloperController : ControllerBase
     public async Task<List<Developer>> GetByRole(string role)
     {
         List<Developer> developers = await _context.Developers.Where( _developer => _developer.Role.ToLower() == role.ToLower()).ToListAsync();
-
         return developers;
     }
 
