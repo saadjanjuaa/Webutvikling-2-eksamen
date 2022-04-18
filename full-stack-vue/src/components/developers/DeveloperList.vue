@@ -1,7 +1,7 @@
 <template>
     <section>
 
-        <h2 class="mt-5 mb-3">Utviklere</h2>
+        <h3 class="mt-5 mb-3">Utviklere</h3>
 
         <section class="row">
             <developer-item v-for="(developer,i) in developers" :key="i"

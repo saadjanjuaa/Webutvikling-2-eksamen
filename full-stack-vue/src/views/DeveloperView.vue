@@ -1,6 +1,7 @@
 <template>
 
     <section>
+      <h2 class="mt-5">Utviklere</h2>
       <search-developer-item></search-developer-item>
       <developer-list></developer-list>
     </section>

@@ -1,6 +1,6 @@
 <template>
     <section class="mt-5">
-        <h2>Endre ett oppdrag</h2>
+        <h3>Endre ett oppdrag</h3>
 
         <label>Id</label>
         <div class="d-flex">

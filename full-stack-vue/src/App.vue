@@ -34,4 +34,8 @@ export default {
   font-family: circularStd;
 }
 
+h2 {
+	font-size: 3rem;
+}
+
 </style>

@@ -1,7 +1,7 @@
 <template>
     <section>
 
-        <h2 class="mt-5 mb-3">Firmaer</h2>
+        <h3 class="mt-5 mb-3">Firmaer</h3>
 
         <section class="row">
             <company-item v-for="(company,i) in companies" :key="i"

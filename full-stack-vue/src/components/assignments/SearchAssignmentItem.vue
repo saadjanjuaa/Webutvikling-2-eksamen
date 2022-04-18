@@ -1,5 +1,5 @@
 <template>
-    <section class="mt-5">
+    <section class="mt-4">
 
         <h3>Søk på id</h3>
 

@@ -1,6 +1,7 @@
 <template>
 
     <section>
+      <h2 class="mt-5">Firmaer</h2>
       <search-company-item></search-company-item>
       <add-company-item></add-company-item>
       <company-list></company-list>

@@ -20,6 +20,15 @@ const companyService = ( function(){
         companies.value = request.data;
     } )()
 
+
+    // SØKE PÅ ID
+    const getById = async (id) => {
+        alert(id)
+        const request = await axios.get(`https://localhost:7287/api/company/GetById/${id}`);
+        companies.value = request.data;
+    }
+
+
     // POSTE NY FIRMA
     const postNewCompany = async (newCompany) => {
 
@@ -30,7 +39,7 @@ const companyService = ( function(){
 
     const getAll = () => companies;
 
-    return {getAll, postNewCompany}
+    return {getAll, postNewCompany, getById}
 
 
 }() );

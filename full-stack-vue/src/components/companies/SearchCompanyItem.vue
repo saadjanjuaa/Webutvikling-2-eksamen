@@ -1,5 +1,5 @@
 <template>
-    <section class="mt-5">
+    <section class="mt-4">
 
         <h3>Søk på id</h3>
 
@@ -7,8 +7,8 @@
 
         <label class="mb-1">Angi id</label>
         <div class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Id" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <input v-model="idToSearch" class="form-control me-2" type="search" placeholder="Id" aria-label="Search">
+            <button @click="searchById" class="btn btn-outline-success" type="submit">Search</button>
         </div>
 
     </section>
@@ -16,10 +16,19 @@
 
 <script>
 import ShowAllButton from '../shared/showAllButton.vue'
+import companyService from '../../services/companyService.js'
+import { ref } from '@vue/reactivity'
 
 export default {
     setup() {
         
+        let idToSearch = ref(""); // PAARSE
+
+        const searchById = () => {
+            companyService.getById(parseInt(idToSearch.value))
+        }
+
+        return {idToSearch, searchById}
     },
     components: {
         ShowAllButton
