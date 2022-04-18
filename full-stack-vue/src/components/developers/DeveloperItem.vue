@@ -4,12 +4,15 @@
         <div class="card mb-5" style="width: 18rem;">
             <img class="card-img-top" src="https://localhost:7287/images/ole-duskwood.jpg" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">{{name}}</h5>
+                <div class="d-flex justify-content-between">
+                    <h5 class="card-title">{{name}}</h5>
+                    <h5 class="text-justify">{{id}}</h5>
+                </div>
                 <ul>
-                    <li>Id: {{id}}</li>
                     <li>Rolle: {{role}}</li>
                     <li>Månedlig lønn: {{monthlySalary}}</li>
-                    <li>Junior? {{junior}}</li>
+                    <li v-if="junior">Junior</li>
+                    <li v-else>Senior</li>
                 </ul>
             </div>
         </div>
