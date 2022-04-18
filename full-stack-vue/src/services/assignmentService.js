@@ -19,6 +19,12 @@ const assignmentService = ( function(){
         assignments.value = request.data;
     } )()
 
+    // SØKE PÅ KATEGORI
+    const getByCategory = async (category) => {
+        const request = await axios.get(`https://localhost:7287/api/assignment/GetByCategory/${category}`);
+        assignments.value = request.data;
+    }
+
 
     // HENTE PÅ ID
     const getById = async (id) => {
@@ -43,7 +49,7 @@ const assignmentService = ( function(){
 
     const getAll = () => assignments;
 
-    return {getAll, getById, putAssignment}
+    return {getAll, getById, putAssignment, getByCategory}
 
 
 }() );

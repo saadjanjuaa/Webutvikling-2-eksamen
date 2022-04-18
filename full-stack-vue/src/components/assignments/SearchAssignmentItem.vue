@@ -16,8 +16,8 @@
 
         <label class="mb-1">Angi kategori (Design, App-utvikling)</label>
         <div class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Kategori" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <input v-model="category" class="form-control me-2" type="search" placeholder="Kategori" aria-label="Search">
+            <button @click="searchByCategory" class="btn btn-outline-success" type="submit">Search</button>
         </div>
 
     </section>
@@ -34,6 +34,7 @@ export default {
     setup() {
 
         let id = ref(0);
+        let category = ref("");
 
 
         const sea = async () => {
@@ -41,7 +42,11 @@ export default {
         }
 
 
-        return {id, sea}
+        const searchByCategory = () => {
+            assignmentService.getByCategory(category.value);
+        }
+
+        return {id, sea, searchByCategory, category}
         
     },
     components: {
