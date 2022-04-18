@@ -4,13 +4,14 @@
         <div class="card mb-5" style="width: 18rem;" v-bind:class="international ? 'company-is-international' : '' ">
             <img class="card-img-top" src="https://localhost:7287/images/snohetta.jpg" alt="">
             <div class="card-body">
-                <h5 class="card-title">{{name}}</h5>
+                 <div class="d-flex justify-content-between">
+                    <h5 class="card-title">{{name}}</h5>
+                    <h5 class="text-justify">{{id}}</h5>
+                </div>
                 <ul>
-                    <li>{{id}}</li>
-                    <li>{{phoneNumber}}</li>
+                    <li>Telefon: {{phoneNumber}}</li>
                     <li v-if="international">Globalt firma</li>
                     <li v-else>Ikke et globalt firma</li>
-                    <li>{{image}}</li>
                 </ul>
             </div>
         </div>
