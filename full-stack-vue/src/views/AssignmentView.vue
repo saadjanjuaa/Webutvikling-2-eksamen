@@ -1,7 +1,7 @@
 <template>
 
     <section>
-      <h2 class="mt-5">Oppdrag</h2>
+      <h2 class="mt-5" data-aos="fade-right">Oppdrag</h2>
       <search-assignment-item></search-assignment-item>
       <edit-assignment-item></edit-assignment-item>
       <assignment-list></assignment-list>

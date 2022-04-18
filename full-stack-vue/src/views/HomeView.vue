@@ -1,7 +1,7 @@
 <template>
 
   <section>
-    <h2 class="mt-5">Dashbord</h2>
+    <h2 class="mt-5" data-aos="fade-right">Dashbord</h2>
     <developer-list></developer-list>
     <company-list></company-list>
     <assignment-list></assignment-list>

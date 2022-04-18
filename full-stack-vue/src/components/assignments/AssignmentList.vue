@@ -1,7 +1,7 @@
 <template>
     <section>
 
-        <h3 class="mt-5 mb-3">Oppdrag</h3>
+        <h3 class="mt-5 mb-3" data-aos="fade-right">Oppdrag</h3>
 
         <section class="row">
             <assignment-item v-for="(assignment,i) in assignments" :key="i"

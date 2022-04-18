@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9ijUlSwV96cfzXDdkSlKC5XYIJJr661d0F4DfmqbKD4=",
+  "Hash": "lWWDOK6hf0ZbNCTEijNrua5evROFQAAh6tCpRbJswlo=",
   "Source": "FullStackApi",
   "BasePath": "_content/FullStackApi",
   "Mode": "Default",
@@ -17,6 +17,40 @@
   ],
   "Assets": [
     {
+      "Identity": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/images/julie-andersen.jpg",
+      "SourceId": "FullStackApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/",
+      "BasePath": "_content/FullStackApi",
+      "RelativePath": "images/julie-andersen.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/julie-andersen.jpg"
+    },
+    {
+      "Identity": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/images/no-image-available.jpg",
+      "SourceId": "FullStackApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/",
+      "BasePath": "_content/FullStackApi",
+      "RelativePath": "images/no-image-available.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/no-image-available.jpg"
+    },
+    {
       "Identity": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/images/ole-duskwood.jpg",
       "SourceId": "FullStackApi",
       "SourceType": "Discovered",
@@ -32,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/ole-duskwood.jpg"
+    },
+    {
+      "Identity": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/images/patel-singh.jpg",
+      "SourceId": "FullStackApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/",
+      "BasePath": "_content/FullStackApi",
+      "RelativePath": "images/patel-singh.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/patel-singh.jpg"
     },
     {
       "Identity": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/images/snohetta.jpg",

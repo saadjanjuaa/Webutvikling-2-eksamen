@@ -1,6 +1,6 @@
 <template>
 
-    <article class="col col-sm-12 col-md-6 col-lg-4 col-xl-3">
+    <article class="col col-sm-12 col-md-6 col-lg-4 col-xl-3" data-aos="fade-right">
         <div class="card mb-5" style="width: 18rem;" v-bind:class="international ? 'company-is-international' : '' ">
             <img class="card-img-top" src="https://localhost:7287/images/snohetta.jpg" alt="">
             <div class="card-body">
