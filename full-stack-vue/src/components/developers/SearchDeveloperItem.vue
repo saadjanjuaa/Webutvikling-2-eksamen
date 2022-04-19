@@ -20,6 +20,28 @@
             <button @click="searchByRole" class="btn btn-outline-success" type="submit">Søk</button>
         </div>
 
+
+        <h3 class="mt-5 mb-2">Vis juniorer</h3>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadio1">
+            <label class="form-check-label" for="flexRadio1">
+                Junior
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadio2" checked>
+            <label class="form-check-label" for="flexRadio2">
+                Senior
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadio2" checked>
+            <label class="form-check-label" for="flexRadio2">
+                Alle
+            </label>
+        </div>
+
     </section>
 </template>
 
@@ -63,7 +85,7 @@ export default {
         display: block;
     }
 
-    input {
+    .form-control {
         width: 13rem;
     }
     

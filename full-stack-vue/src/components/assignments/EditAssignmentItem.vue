@@ -38,7 +38,7 @@ export default {
         })
 
         const getAssignment = async () => {
-            const assignment = await assignmentService.getById(assignmentForm.id);
+            const assignment = await assignmentService.getInfoById(assignmentForm.id);
 
             assignmentForm.description = assignment.description;
             assignmentForm.category = assignment.category;

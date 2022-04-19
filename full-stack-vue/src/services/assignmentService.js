@@ -26,8 +26,16 @@ const assignmentService = ( function(){
     }
 
 
-    // HENTE PÅ ID
+    // HENTE PÅ ID FOR Å SØKE PÅ ID
     const getById = async (id) => {
+        const request = await axios.get(`https://localhost:7287/api/assignment/GetById/${id}`);
+        assignments.value = [];
+        assignments.value.push(request.data);
+    }
+
+
+    // HENTE INFO OM ETT OPPDRAG
+    const getInfoById = async (id) => {
         const request = await axios.get(`https://localhost:7287/api/assignment/GetById/${id}`);
         return request.data;
     }
@@ -49,7 +57,7 @@ const assignmentService = ( function(){
 
     const getAll = () => assignments;
 
-    return {getAll, getById, putAssignment, getByCategory}
+    return {getAll, getById, putAssignment, getByCategory, getInfoById}
 
 
 }() );

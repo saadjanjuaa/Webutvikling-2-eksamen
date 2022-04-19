@@ -8,7 +8,7 @@
         <label class="mb-1">Angi id</label>
         <div class="d-flex">
             <input v-model="id" class="form-control me-2" type="search" placeholder="Id" aria-label="Search">
-            <button @click="sea" class="btn btn-outline-success" type="submit">Search</button>
+            <button @click="searchById" class="btn btn-outline-success" type="submit">Search</button>
         </div>
 
 
@@ -33,12 +33,12 @@ import ShowAllButton from '../shared/showAllButton.vue'
 export default {
     setup() {
 
-        let id = ref(0);
+        let id = ref("");
         let category = ref("");
 
 
-        const sea = async () => {
-            await assignmentService.getById(id.value)
+        const searchById = () => {
+            assignmentService.getById(parseInt(id.value))
         }
 
 
@@ -46,7 +46,7 @@ export default {
             assignmentService.getByCategory(category.value);
         }
 
-        return {id, sea, searchByCategory, category}
+        return {id, searchById, searchByCategory, category}
         
     },
     components: {

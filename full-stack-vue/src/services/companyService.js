@@ -23,9 +23,11 @@ const companyService = ( function(){
 
     // SØKE PÅ ID
     const getById = async (id) => {
-        alert(id)
         const request = await axios.get(`https://localhost:7287/api/company/GetById/${id}`);
-        companies.value = request.data;
+        companies.value = [];
+        companies.value.push(request.data);
+         //companies.value = [];
+        //companies.value = request.data;
     }
 
 
@@ -34,6 +36,12 @@ const companyService = ( function(){
 
         const request = await axios.post("https://localhost:7287/api/company", newCompany);
         companies.value.push(request.data)
+
+        /*const request = await axios.get("https://localhost:7287/api/company");
+        companies.value = request.data;
+
+        const request2 = await axios.post("https://localhost:7287/api/company", newCompany);
+        companies.value.push(request2.data)*/
     }
 
 
