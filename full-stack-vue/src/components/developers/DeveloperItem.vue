@@ -2,7 +2,7 @@
 
     <article class="col col-sm-12 col-md-6 col-lg-4 col-xl-3" data-aos="fade-right">
         <div class="card mb-5" style="width: 18rem;">
-            <img class="card-img-top" src="https://localhost:7287/images/ole-duskwood.jpg" alt="Card image cap">
+            <img class="card-img-top" :src="`https://localhost:7287/images/${image}`" alt="Bilde av {{name}}">
             <div class="card-body">
                 <div class="d-flex justify-content-between">
                     <h5 class="card-title">{{name}}</h5>

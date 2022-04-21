@@ -37,11 +37,11 @@ public class ImageUploadController : ControllerBase
                 }
             }
 
-            return Ok();
+            return StatusCode(200);
         }
         else
         {
-            return BadRequest();
+            return StatusCode(500);
         }
     }
 
