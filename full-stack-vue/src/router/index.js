@@ -12,6 +12,7 @@ const routes = [
   },
   {
     path: '/assignments',
+    alias: ["/oppdrag"],
     name: 'assignments',
     component: AssignmentView
   },
@@ -22,6 +23,7 @@ const routes = [
   },
   {
     path: '/developers',
+    alias: ["/utviklere", "/personer"],
     name: 'developers',
     component: DeveloperView
   }

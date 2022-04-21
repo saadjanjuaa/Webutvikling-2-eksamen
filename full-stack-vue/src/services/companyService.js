@@ -14,30 +14,28 @@ const companyService = ( function(){
     ]);
 
 
+    const companyControllerUrl = "https://localhost:7287/api/company";
+
+
     // HENTE ALLE 
     (async () => {
-        const request = await axios.get("https://localhost:7287/api/company");
+        const request = await axios.get(companyControllerUrl);
         companies.value = request.data;
     } )()
 
 
     // SØKE PÅ ID
     const getById = async (id) => {
-        const request = await axios.get(`https://localhost:7287/api/company/GetById/${id}`);
+        const request = await axios.get(companyControllerUrl + `/GetById/${id}`);
         companies.value = [];
         companies.value.push(request.data);
-         //companies.value = [];
-        //companies.value = request.data;
     }
 
 
     // POSTE NY FIRMA
     const postCompany = async (newCompany, image) => {
 
-        //const request = await axios.post("https://localhost:7287/api/company", newCompany);
-        //companies.value.push(request.data)
-
-        const request = await axios.post("https://localhost:7287/api/company", newCompany);
+        const request = await axios.post(companyControllerUrl, newCompany);
         
         axios({ 
             method: "POST",

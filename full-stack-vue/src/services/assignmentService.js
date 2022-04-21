@@ -13,22 +13,25 @@ const assignmentService = ( function(){
     ]);
 
 
+    const assignmentControllerUrl = "https://localhost:7287/api/assignment";
+
+
     // HENTE ALLE 
     (async () => {
-        const request = await axios.get("https://localhost:7287/api/assignment");
+        const request = await axios.get(assignmentControllerUrl);
         assignments.value = request.data;
     } )()
 
     // SØKE PÅ KATEGORI
     const getByCategory = async (category) => {
-        const request = await axios.get(`https://localhost:7287/api/assignment/GetByCategory/${category}`);
+        const request = await axios.get(assignmentControllerUrl + `/GetByCategory/${category}`);
         assignments.value = request.data;
     }
 
 
     // HENTE PÅ ID FOR Å SØKE PÅ ID
     const getById = async (id) => {
-        const request = await axios.get(`https://localhost:7287/api/assignment/GetById/${id}`);
+        const request = await axios.get(assignmentControllerUrl + `/GetById/${id}`);
         assignments.value = [];
         assignments.value.push(request.data);
     }
@@ -36,14 +39,14 @@ const assignmentService = ( function(){
 
     // HENTE INFO OM ETT OPPDRAG
     const getInfoById = async (id) => {
-        const request = await axios.get(`https://localhost:7287/api/assignment/GetById/${id}`);
+        const request = await axios.get(assignmentControllerUrl + `/GetById/${id}`);
         return request.data;
     }
 
 
     const putAssignment = async (editedAssignment) => {
 
-        await axios.put("https://localhost:7287/api/assignment/", editedAssignment);
+        await axios.put(assignmentControllerUrl, editedAssignment);
 
         const temporaryArray = JSON.parse(JSON.stringify(assignments.value));
 

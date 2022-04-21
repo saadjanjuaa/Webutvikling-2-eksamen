@@ -14,23 +14,25 @@ const developerService = ( function(){
         }
     ]);
 
+    const developerControllerUrl = "https://localhost:7287/api/developer";
+
 
     // HENTE ALLE 
     (async () => {
-        const request = await axios.get("https://localhost:7287/api/developer");
+        const request = await axios.get(developerControllerUrl);
         developers.value = request.data;
     } )()
 
 
     // SØKE PÅ NAVN
     const getByName = async (name) => {
-        const request = await axios.get(`https://localhost:7287/api/developer/GetByName/${name}`);
+        const request = await axios.get(developerControllerUrl + `/GetByName/${name}`);
         developers.value = request.data;
     }
 
     // SØKE PÅ ROLLE
     const getByRole = async (role) => {
-        const request = await axios.get(`https://localhost:7287/api/developer/GetByRole/${role}`);
+        const request = await axios.get(developerControllerUrl + `/GetByRole/${role}`);
         developers.value = request.data;
     }
 
