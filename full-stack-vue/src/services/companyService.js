@@ -32,22 +32,28 @@ const companyService = ( function(){
 
 
     // POSTE NY FIRMA
-    const postNewCompany = async (newCompany) => {
+    const postCompany = async (newCompany, image) => {
+
+        //const request = await axios.post("https://localhost:7287/api/company", newCompany);
+        //companies.value.push(request.data)
 
         const request = await axios.post("https://localhost:7287/api/company", newCompany);
-        companies.value.push(request.data)
+        
+        axios({ 
+            method: "POST",
+            url: "https://localhost:7287/imageUpload/postImage",
+            data: image,
+            config: { header: {"Content-Type": "multipart/form-data"} }
+        })
 
-        /*const request = await axios.get("https://localhost:7287/api/company");
-        companies.value = request.data;
+        companies.value.push(request.data);
 
-        const request2 = await axios.post("https://localhost:7287/api/company", newCompany);
-        companies.value.push(request2.data)*/
     }
 
 
     const getAll = () => companies;
 
-    return {getAll, postNewCompany, getById}
+    return {getAll, postCompany, getById}
 
 
 }() );
