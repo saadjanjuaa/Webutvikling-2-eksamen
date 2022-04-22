@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lWWDOK6hf0ZbNCTEijNrua5evROFQAAh6tCpRbJswlo=",
+  "Hash": "IwNCTdZINsPz2I1dro8C/zkHjzD2YWSwsJpj110y0CE=",
   "Source": "FullStackApi",
   "BasePath": "_content/FullStackApi",
   "Mode": "Default",
@@ -85,12 +85,12 @@
       "OriginalItemSpec": "wwwroot/images/patel-singh.jpg"
     },
     {
-      "Identity": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/images/snohetta.jpg",
+      "Identity": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/images/plantasjen.webp",
       "SourceId": "FullStackApi",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/",
       "BasePath": "_content/FullStackApi",
-      "RelativePath": "images/snohetta.jpg",
+      "RelativePath": "images/plantasjen.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,7 +99,41 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/snohetta.jpg"
+      "OriginalItemSpec": "wwwroot/images/plantasjen.webp"
+    },
+    {
+      "Identity": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/images/snohetta.png",
+      "SourceId": "FullStackApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/",
+      "BasePath": "_content/FullStackApi",
+      "RelativePath": "images/snohetta.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/snohetta.png"
+    },
+    {
+      "Identity": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/images/tidal.jpg",
+      "SourceId": "FullStackApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/",
+      "BasePath": "_content/FullStackApi",
+      "RelativePath": "images/tidal.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/tidal.jpg"
     },
     {
       "Identity": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/index.html",

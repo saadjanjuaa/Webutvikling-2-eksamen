@@ -36,10 +36,16 @@ const developerService = ( function(){
         developers.value = request.data;
     }
 
+    // SLETTE EN UTVIKLER
+    const deleteDeveloper = async (developerToDeleteId) => {
+        const request = await axios.delete(developerControllerUrl + `/Delete/${developerToDeleteId}`)
+        developers.value = request.data;
+    }
+
 
     const getAll = () => developers;
 
-    return {getAll,getByName, getByRole}
+    return {getAll,getByName, getByRole, deleteDeveloper}
 
 
 }() );

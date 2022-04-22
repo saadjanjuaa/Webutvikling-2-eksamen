@@ -45,6 +45,20 @@ public class DeveloperController : ControllerBase
         return developers;
     }
 
+
+    // SLETTE EN DEVELOPER
+    [HttpDelete]
+    [Route("[action]/{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        Developer developer = await _context.Developers.FindAsync(id);
+        _context.Developers.Remove(developer);
+        await _context.SaveChangesAsync();
+        return NoContent();
+    }
+
+
+
     // HENTE DEVELOPERS UTIFRA JUNIOR ELLER IKKE
     /*
     [HttpGet]
