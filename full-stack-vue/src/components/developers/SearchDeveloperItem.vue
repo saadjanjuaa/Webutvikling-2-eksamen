@@ -3,8 +3,6 @@
 
         <h3>Søk på navn</h3>
 
-        <show-all-button></show-all-button>
-        
         <label class="mb-1">Angi navn</label>
         <div class="d-flex">
             <input v-model="nameToSearch" class="form-control me-2" type="search" placeholder="Navn" aria-label="Search">
@@ -42,6 +40,8 @@
             </label>
         </div>
 
+        <show-all-button></show-all-button>
+        
     </section>
 </template>
 

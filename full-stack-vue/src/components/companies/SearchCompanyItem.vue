@@ -3,14 +3,14 @@
 
         <h3>Søk på id</h3>
 
-        <show-all-button></show-all-button>
-
         <label class="mb-1">Angi id</label>
         <div class="d-flex">
             <input v-model="idToSearch" class="form-control me-2" type="search" placeholder="Id" aria-label="Search">
             <button @click="searchById" class="btn btn-outline-success" type="submit">Search</button>
         </div>
 
+        <show-all-button></show-all-button>
+        
     </section>
 </template>
 
