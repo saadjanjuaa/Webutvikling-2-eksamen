@@ -8,8 +8,8 @@
                     <h5 class="card-title">{{name}}</h5>
                     <h5 class="text-justify">{{id}}</h5>
                 </div>
+                <h6 class="h6 text-muted">{{role}}</h6>
                 <ul>
-                    <li>Rolle: {{role}}</li>
                     <li>Månedlig lønn: {{monthlySalary}}</li>
                     <li v-if="junior">Junior</li>
                     <li v-else>Senior</li>
