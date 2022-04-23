@@ -24,6 +24,11 @@ const companyService = ( function(){
     } )()
 
 
+    const getTotalCompanies = () => {
+        return companies.value.length;
+    }
+
+
     // SØKE PÅ ID
     const getById = async (id) => {
         const request = await axios.get(companyControllerUrl + `/GetById/${id}`);
@@ -51,7 +56,7 @@ const companyService = ( function(){
 
     const getAll = () => companies;
 
-    return {getAll, postCompany, getById}
+    return {getAll, postCompany, getById, getTotalCompanies}
 
 
 }() );

@@ -9,9 +9,8 @@ const assignmentService = ( function(){
             description: "Dummy description",
             category: "Dummy design",
             company: "Dummy company"
-        }
+        },
     ]);
-
 
     const assignmentControllerUrl = "https://localhost:7287/api/assignment";
 
@@ -22,6 +21,12 @@ const assignmentService = ( function(){
         assignments.value = request.data;
     } )()
 
+
+    const getTotalAssignments = () => {
+        return assignments.value.length;
+    }
+
+    
     // SØKE PÅ KATEGORI
     const getByCategory = async (category) => {
         const request = await axios.get(assignmentControllerUrl + `/GetByCategory/${category}`);
@@ -60,7 +65,7 @@ const assignmentService = ( function(){
 
     const getAll = () => assignments;
 
-    return {getAll, getById, putAssignment, getByCategory, getInfoById}
+    return {getAll, getById, putAssignment, getByCategory, getInfoById, getTotalAssignments}
 
 
 }() );

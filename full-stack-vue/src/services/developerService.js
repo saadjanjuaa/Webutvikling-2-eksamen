@@ -24,6 +24,11 @@ const developerService = ( function(){
     } )()
 
 
+    const getTotalDevelopers = () => {
+        return developers.value.length;
+    }
+
+
     // SØKE PÅ NAVN
     const getByName = async (name) => {
         const request = await axios.get(developerControllerUrl + `/GetByName/${name}`);
@@ -45,7 +50,7 @@ const developerService = ( function(){
 
     const getAll = () => developers;
 
-    return {getAll,getByName, getByRole, deleteDeveloper}
+    return {getAll, getByName, getByRole, deleteDeveloper, getTotalDevelopers}
 
 
 }() );
