@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IwNCTdZINsPz2I1dro8C/zkHjzD2YWSwsJpj110y0CE=",
+  "Hash": "OKlJ+ay2eidEzpR3wHGEKBco+RqpI5qRZ/MLFucQllw=",
   "Source": "FullStackApi",
   "BasePath": "_content/FullStackApi",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/images/artworks-000518834103-9eytkn-t500x500.jpg",
+      "SourceId": "FullStackApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/",
+      "BasePath": "_content/FullStackApi",
+      "RelativePath": "images/artworks-000518834103-9eytkn-t500x500.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/artworks-000518834103-9eytkn-t500x500.jpg"
+    },
     {
       "Identity": "/Users/saadjanjuaa/Desktop/Eksamen Webutvikling 2/FullStackApi/wwwroot/images/julie-andersen.jpg",
       "SourceId": "FullStackApi",

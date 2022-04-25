@@ -53,10 +53,18 @@ const companyService = ( function(){
 
     }
 
+    
+    // SLETTE EN UTVIKLER
+    const deleteCompany = async (companyToDeleteId) => {
+        await axios.delete(companyControllerUrl + `/Delete/${companyToDeleteId}`);
+        const request = await axios.get(companyControllerUrl);
+        companies.value = request.data;
+    }
+
 
     const getAll = () => companies;
 
-    return {getAll, postCompany, getById, getTotalCompanies}
+    return {getAll, postCompany, getById, getTotalCompanies, deleteCompany}
 
 
 }() );

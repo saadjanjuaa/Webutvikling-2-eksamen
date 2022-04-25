@@ -1,7 +1,7 @@
 <template>
   <div class="example">
     <h3>Omsetning</h3>
-    <apexcharts width="900" height="495" type="line" :options="chartOptions" :series="series"
+    <apexcharts width="900" height="450" type="line" :options="chartOptions" :series="series"
     />
   </div>
 </template>
@@ -15,6 +15,16 @@ export default defineComponent({
   setup() {
 
     const chartOptions = ref({
+      chart: {
+        height: 350,
+        type: 'area'
+      },
+      stroke: {
+        curve: 'smooth'
+      },
+      fill: {
+        colors: ['#E6E6FA', '#E6E6FA', '#E6E6FA']
+      },
       xaxis: {
         type: "datetime",
         categories: [
@@ -29,8 +39,6 @@ export default defineComponent({
           "09/01/2021",
           "12/01/2021",
 
-          
-
         ],
       },
     });
@@ -39,7 +47,7 @@ export default defineComponent({
     const series = ref([
       {
         name: '2020',
-        data: [40000, 65000, 44000, 48000, 40000, 52000, 85000, 90000,]
+        data: [40000, 65000, 40000, 49000, 49000, 40000, 60000, 80000,]
       },
      // {
        // name: '2021',

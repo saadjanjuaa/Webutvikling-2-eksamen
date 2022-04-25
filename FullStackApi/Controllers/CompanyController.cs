@@ -46,5 +46,18 @@ public class CompanyController : ControllerBase
 
         return newCompany;
     }
+
+
+    // SLETTE EN DEVELOPER
+    [HttpDelete]
+    [Route("[action]/{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        Company company = await _context.Companies.FindAsync(id);
+        _context.Companies.Remove(company);
+        await _context.SaveChangesAsync();
+        return NoContent();
+    }
+    
     
 }

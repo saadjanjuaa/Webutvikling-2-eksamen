@@ -3,13 +3,13 @@
         <h3>Legg til nytt firma</h3>
  
         <label class="mt-1">Navn</label>
-        <input class="form-control me-2" v-model="name" type="text">
+        <input class="form-control me-2" v-model="name" type="text" placeholder="Navn">
 
         <label class="mt-5">Telefon Nummer</label>
-        <input class="form-control me-2" v-model="phoneNumber" type="text">
+        <input class="form-control me-2" v-model="phoneNumber" type="text" placeholder="Telefon Nummer">
 
         <label class="mt-5">Internasjonalt</label>
-        <input class="form-control me-2" v-model="international" type="text">
+        <input class="form-control me-2" v-model="international" type="text" placeholder="Internasjonalt">
 
         <label class="mt-5">Last opp bilde</label>
         <input class="form-control me-2" @change="setImage" type="file">

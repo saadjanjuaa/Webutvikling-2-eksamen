@@ -43,7 +43,8 @@ const developerService = ( function(){
 
     // SLETTE EN UTVIKLER
     const deleteDeveloper = async (developerToDeleteId) => {
-        const request = await axios.delete(developerControllerUrl + `/Delete/${developerToDeleteId}`)
+        await axios.delete(developerControllerUrl + `/Delete/${developerToDeleteId}`)
+        const request = await axios.get(developerControllerUrl);
         developers.value = request.data;
     }
 
