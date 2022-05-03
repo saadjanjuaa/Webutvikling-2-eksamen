@@ -31,21 +31,49 @@ const developerService = ( function(){
 
     // SØKE PÅ NAVN
     const getByName = async (name) => {
+
         const request = await axios.get(developerControllerUrl + `/GetByName/${name}`);
-        developers.value = request.data;
+
+        if (request.data.length != 0 ) {
+            developers.value = request.data;
+        } else {
+            alert("Det finnes ingen utviklere med det navnet")
+        }
+        
     }
 
     // SØKE PÅ ROLLE
     const getByRole = async (role) => {
+
         const request = await axios.get(developerControllerUrl + `/GetByRole/${role}`);
-        developers.value = request.data;
+
+        if (request.data.length >= 1 ) {
+            developers.value = request.data;
+        } else {
+            alert("Det finnes ingen utviklere med den rollen")
+        }
+
     }
 
     // SLETTE EN UTVIKLER
     const deleteDeveloper = async (developerToDeleteId) => {
-        await axios.delete(developerControllerUrl + `/Delete/${developerToDeleteId}`)
-        const request = await axios.get(developerControllerUrl);
-        developers.value = request.data;
+
+        if (isNaN(parseInt(developerToDeleteId))) {
+            alert("Du må skrive inn ett tall");
+            return -1;
+        }
+
+        const requestId = await axios.get(developerControllerUrl + `/GetById/${developerToDeleteId}`);
+
+        if (requestId.data.length != 0) {
+            await axios.delete(developerControllerUrl + `/Delete/${developerToDeleteId}`)
+            const request = await axios.get(developerControllerUrl);
+            developers.value = request.data;
+
+        } else {
+            alert("Det finnes ingen utviklere med den id-en")
+        }
+        
     }
 
 
