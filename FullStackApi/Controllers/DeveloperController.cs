@@ -26,6 +26,16 @@ public class DeveloperController : ControllerBase
     }
 
 
+    // HENTE PÅ ID
+    [HttpGet]
+    [Route("[action]/{id}")]
+    public async Task<Developer> GetById(int id)
+    {
+        Developer developer = await _context.Developers.FindAsync(id);
+        return developer;
+    }
+
+
     // HENTE PÅ NAVN
     [HttpGet]
     [Route("[action]/{name}")]
