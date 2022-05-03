@@ -38,12 +38,24 @@ export default {
 
 
         const searchById = () => {
-            assignmentService.getById(parseInt(id.value))
+
+            if (id.value == "") {
+                alert("Feltet er tomt, du må skrive inn en id")
+            } else {
+                assignmentService.getById(parseInt(id.value))
+            }
+
         }
 
 
         const searchByCategory = () => {
-            assignmentService.getByCategory(category.value);
+
+            if (category.value == "") {
+                alert("Feltet er tomt, du må skrive inn en kategori")
+            } else {
+                assignmentService.getByCategory(category.value);
+            }
+
         }
 
         return {id, searchById, searchByCategory, category}

@@ -5,7 +5,7 @@
 
         <label class="mb-1">Angi id</label>
         <div class="d-flex">
-            <input v-model="idToSearch" class="form-control me-2" type="search" placeholder="Id" aria-label="Search">
+            <input v-model="id" class="form-control me-2" type="search" placeholder="Id" aria-label="Search">
             <button @click="searchById" class="btn btn-outline-success" type="submit">Search</button>
         </div>
 
@@ -22,13 +22,22 @@ import { ref } from '@vue/reactivity'
 export default {
     setup() {
         
-        let idToSearch = ref(""); // PAARSE
+        let id = ref(""); 
 
         const searchById = () => {
-            companyService.getById(parseInt(idToSearch.value))
+
+            if (id.value == "") {
+                alert("Feltet er tomt, du må skrive inn en id")
+            } else {
+                companyService.getById(parseInt(id.value))
+            }
+
         }
 
-        return {idToSearch, searchById}
+        return {
+            id,
+            searchById
+        }
     },
     components: {
         ShowAllButton

@@ -86,7 +86,7 @@ export default {
 
   setup() {
 
-   // let totalAssignments = assignmentService.getTotalAssignments();
+    //let totalAssignments = assignmentService.getTotalAssignments();
     //let totalCompanies = companyService.getTotalCompanies();
     //let totalDevelopers = developerService.getTotalDevelopers();
 

@@ -22,7 +22,13 @@ export default {
         let id = ref("");
 
         const deleteCompany = () => {
-            companyService.deleteCompany(id.value);
+
+            if (id.value == "") {
+                alert("Feltet er tomt, du må skrive inn en id")
+            } else {
+                companyService.deleteCompany(id.value);
+            }
+
         }
 
         return {

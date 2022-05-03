@@ -22,7 +22,13 @@ export default {
         let id = ref("");
 
         const deleteDeveloper = () => {
-            developerService.deleteDeveloper(id.value);
+
+            if (id.value == "") {
+                alert("Feltet er tomt, du må skrive inn en id")
+            } else {
+                developerService.deleteDeveloper(id.value);
+            }
+            
         }
 
         return {

@@ -5,7 +5,7 @@
 
         <label class="mb-1">Angi navn</label>
         <div class="d-flex">
-            <input v-model="nameToSearch" class="form-control me-2" type="search" placeholder="Navn" aria-label="Search">
+            <input v-model="name" class="form-control me-2" type="search" placeholder="Navn" aria-label="Search">
             <button @click="searchByName" class="btn btn-outline-success" type="submit">Søk</button>
         </div>
         
@@ -14,30 +14,8 @@
 
         <label class="mb-1">Angi rolle (Backend utvikler, Interaksjonsdesigner)</label>
         <div class="d-flex">
-            <input v-model="roleToSearch" class="form-control me-2" type="search" placeholder="Rolle" aria-label="Search">
+            <input v-model="role" class="form-control me-2" type="search" placeholder="Rolle" aria-label="Search">
             <button @click="searchByRole" class="btn btn-outline-success" type="submit">Søk</button>
-        </div>
-
-
-        <h3 class="mt-5 mb-2">Vis juniorer</h3>
-
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadio1">
-            <label class="form-check-label" for="flexRadio1">
-                Junior
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadio2" checked>
-            <label class="form-check-label" for="flexRadio2">
-                Senior
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadio2" checked>
-            <label class="form-check-label" for="flexRadio2">
-                Alle
-            </label>
         </div>
 
         <show-all-button></show-all-button>
@@ -55,21 +33,31 @@ import ShowAllButton from '../shared/showAllButton.vue'
 export default {
     setup() {
 
-        let nameToSearch = ref("");
-        let roleToSearch = ref("");
+        let name = ref("");
+        let role = ref("");
         
         const searchByName = () => {
-
-            developerService.getByName(nameToSearch.value);
+            
+            if (name.value == "") {
+                alert("Feltet er tomt, du må skrive inn ett navn")
+            } else {
+                developerService.getByName(name.value);
+            }
+            
         }
 
         const searchByRole = () => {
 
-            developerService.getByRole(roleToSearch.value);
+            if (role.value == "") {
+                alert("Feltet er tomt, du må skrive inn en rolle")
+            } else {
+                developerService.getByRole(role.value);
+            }
+
         }
 
 
-        return {searchByName, nameToSearch, searchByRole, roleToSearch}
+        return {searchByName, name, searchByRole, role}
 
     },
     components: {

@@ -4,7 +4,7 @@
 
         <label>Id</label>
         <div class="d-flex">
-            <input class="form-control me-2" v-model="id" type="text">
+            <input class="form-control me-2" v-model="id" type="text" placeholder="Id">
             <input class="btn btn-outline-primary" @click="getAssignment" type="button" value="Hent">
         </div>
 
@@ -31,13 +31,19 @@ export default {
     setup() {
 
          const assignmentForm = reactive({
-            id: 0,
-            description: "X",
-            category: "X",
-            company: "X"
+            id: "",
+            description: "",
+            category: "",
+            company: ""
         })
 
         const getAssignment = async () => {
+
+            if (assignmentForm.id == "") {
+                alert("Feltet er tomt, du må skrive inn en id")
+                return -1;
+            }
+
             const assignment = await assignmentService.getInfoById(assignmentForm.id);
 
             assignmentForm.description = assignment.description;
@@ -47,16 +53,24 @@ export default {
 
 
         const changeAssignment = async () => {
-            
-            const editedAssignment = {
-                id: parseInt(assignmentForm.id),
-                description: assignmentForm.description,
-                category: assignmentForm.category,
-                company: assignmentForm.company
+
+            if (assignmentForm.id == "") {
+                alert("Du må hente inn en id først")
+            } else {
+
+                const editedAssignment = {
+
+                    id: parseInt(assignmentForm.id),
+                    description: assignmentForm.description,
+                    category: assignmentForm.category,
+                    company: assignmentForm.company
+
+                }
+
+                assignmentService.putAssignment(editedAssignment);
+
             }
 
-            assignmentService.putAssignment(editedAssignment);
-            
         }
 
         return {

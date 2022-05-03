@@ -48,24 +48,36 @@ export default {
         
         const postCompany = () => {
 
-            if (formCompany.international.toUpperCase() == "JA") {
-                internationalBoolean = true;
-            } else if (formCompany.international.toUpperCase() == "NEI") {
-                internationalBoolean = false; 
+            if (formCompany.name == "" || formCompany.phoneNumber == "" || formCompany.international == "" || formCompany.image == "") {
+                alert("Du må fylle alle feltene")
             } else {
-                alert("Du må skrive ja eller nei i feltet")
-                return -1
-            }
 
-            
-            const newCompany = {
-                name: formCompany.name,
-                phoneNumber: formCompany.phoneNumber,
-                international: internationalBoolean,
-                image: formCompany.image
-            }
+                // TELEFON NUMMER SJEKK
+                if (isNaN(parseInt(formCompany.phoneNumber))) {
+                    alert("Du må skrive tall i Telefon Nummer feltet")
+                    return -1
+                }
 
-            companyService.postCompany(newCompany, image)
+                // INTERNASJONAL SJEKK 
+                if (formCompany.international.toUpperCase() == "JA") {
+                    internationalBoolean = true;
+                } else if (formCompany.international.toUpperCase() == "NEI") {
+                    internationalBoolean = false; 
+                } else {
+                    alert("Du må skrive ja eller nei i internasjonal feltet")
+                    return -1
+                }
+
+                const newCompany = {
+                    name: formCompany.name,
+                    phoneNumber: formCompany.phoneNumber,
+                    international: internationalBoolean,
+                    image: formCompany.image
+                }
+
+                companyService.postCompany(newCompany, image)
+                
+            }
 
         }
 
