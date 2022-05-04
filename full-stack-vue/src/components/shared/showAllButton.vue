@@ -1,6 +1,6 @@
 <template>
             
-    <button @click="showAll" class="btn btn-outline-primary mb-4 mt-4 show-all-btn" type="submit">Vis alle</button>
+    <button @click="showAll" class="btn btn-outline-primary mb-4 mt-4 show-all-btn" type="button">Vis alle</button>
 
 </template>
 

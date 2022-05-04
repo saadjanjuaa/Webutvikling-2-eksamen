@@ -9,7 +9,7 @@ const companyService = ( function(){
             name: "Dummy name",
             phoneNumber: -11111111,
             international: null,
-            image: "Dummy.png"
+            image: "no-image-available.jpg"
         }
     ]);
 
@@ -48,7 +48,7 @@ const companyService = ( function(){
             companies.value = [];
             companies.value.push(request.data);
         } else {
-            alert("Det finnes ingen firmaer med den id-en")
+            alert("Det finnes ingen firmaer med den id-en");
         }
         
     }
@@ -75,7 +75,7 @@ const companyService = ( function(){
     const deleteCompany = async (companyToDeleteId) => {
 
         if (companyToDeleteId == "") {
-            alert("Feltet er tomt, du må skrive inn en id")
+            alert("Feltet er tomt, du må skrive inn en id");
             return -1;
         }
 
@@ -86,19 +86,19 @@ const companyService = ( function(){
 
         const requestId = await axios.get(companyControllerUrl + `/GetById/${parseInt(companyToDeleteId)}`);
 
-
         if (requestId.data.length != 0) {
-            await axios.delete(companyControllerUrl + `/Delete/${parseInt(companyToDeleteId)}`)
+            await axios.delete(companyControllerUrl + `/Delete/${parseInt(companyToDeleteId)}`);
             const request = await axios.get(companyControllerUrl);
             companies.value = request.data;
         } else {
-            alert("Det finnes ingen firmaer med den id-en")
+            alert("Det finnes ingen firmaer med den id-en");
         }
 
     }
 
 
     const getAll = () => companies;
+    
 
     return {
         getAll,

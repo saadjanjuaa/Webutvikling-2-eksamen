@@ -1,8 +1,8 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import AssignmentView from '../views/AssignmentView.vue'
-import CompanyView from '../views/CompanyView.vue'
-import DeveloperView from '../views/DeveloperView.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import AssignmentView from '../views/AssignmentView.vue';
+import CompanyView from '../views/CompanyView.vue';
+import DeveloperView from '../views/DeveloperView.vue';
 
 const routes = [
     {
@@ -34,4 +34,4 @@ const router = createRouter({
     routes
 })
 
-export default router
+export default router;

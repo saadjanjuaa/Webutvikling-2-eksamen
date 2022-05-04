@@ -10,9 +10,10 @@ const developerService = ( function(){
             role: "Dummy role",
             monthlySalary: 0,
             junior: null,
-            image: "Dummy.png"
+            image: "no-image-available.jpg"
         }
     ]);
+
 
     const developerControllerUrl = "https://localhost:7287/api/developer";
 
@@ -34,7 +35,7 @@ const developerService = ( function(){
 
         if (name == "") {
             alert("Feltet er tomt, du må skrive inn ett navn");
-            return -1
+            return -1;
         }
 
         const request = await axios.get(developerControllerUrl + `/GetByName/${name}`);
@@ -47,6 +48,7 @@ const developerService = ( function(){
         
     }
 
+
     // SØKE PÅ ROLLE
     const getByRole = async (role) => {
 
@@ -57,13 +59,14 @@ const developerService = ( function(){
 
         const request = await axios.get(developerControllerUrl + `/GetByRole/${role}`);
 
-        if (request.data.length >= 1 ) {
+        if (request.data.length != 0 ) {
             developers.value = request.data;
         } else {
             alert("Det finnes ingen utviklere med den rollen");
         }
 
     }
+
 
     // SLETTE EN UTVIKLER
     const deleteDeveloper = async (developerToDeleteId) => {
@@ -81,17 +84,18 @@ const developerService = ( function(){
         const requestId = await axios.get(developerControllerUrl + `/GetById/${parseInt(developerToDeleteId)}`);
 
         if (requestId.data.length != 0) {
-            await axios.delete(developerControllerUrl + `/Delete/${parseInt(developerToDeleteId)}`)
+            await axios.delete(developerControllerUrl + `/Delete/${parseInt(developerToDeleteId)}`);
             const request = await axios.get(developerControllerUrl);
             developers.value = request.data;
-
         } else {
             alert("Det finnes ingen utviklere med den id-en");
         }
         
     }
 
+
     const getAll = () => developers;
+    
 
     return {
         getAll,

@@ -1,11 +1,10 @@
 <template>
 
-    <article class="col col-sm-12 col-md-6 col-lg-4 col-xl-3" data-aos="fade-right">
+    <article class="col-sm-12 col-md-6 col-lg-4 col-xl-3" data-aos="fade-right">
         <div class="card mb-5" style="width: 18rem;" v-bind:class="international ? 'company-is-international' : '' ">
-            <img v-if="image" class="card-img-top" :src="`https://localhost:7287/images/${image}`" alt="">
-            <img v-else class="card-img-top" src="https://localhost:7287/images/no-image-available.jpg" alt=""> 
+            <img class="card-img-top" :src="`https://localhost:7287/images/${image}`" :alt="`Bilde av firmaet ${name}, sin logo`">
             <div class="card-body">
-                 <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-between">
                     <h5 class="card-title">{{name}}</h5>
                     <h5 class="text-justify">{{id}}</h5>
                 </div>
@@ -22,20 +21,15 @@
 
 <script>
 export default {
-    setup() {
-        
-    },
     props: {
         id: Number,
         name: String,
         phoneNumber: Number,
         international: Boolean,
         image: String
-    },
+    }
 }
 </script>
-
-
 
 <style scoped>
 

@@ -1,6 +1,6 @@
 <template>
     
-    <article class="col col-sm-12 col-md-6 col-lg-4 col-xl-3" data-aos="fade-right">
+    <article class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3" data-aos="fade-right">
         <div class="card mb-5">
             <h5 class="card-header">{{id}}</h5>
             <div class="card-body">
@@ -15,14 +15,11 @@
 
 <script>
 export default {
-    setup() {
-        
-    },
     props: {
         id: Number,
         description: String,
         category: String,
         company: String
-    },
+    }
 }
 </script>

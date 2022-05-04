@@ -1,35 +1,33 @@
 <template>
-    <section class="mt-4">
+    <div class="mt-4 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        
         <h3>Legg til nytt firma</h3>
  
-        <label class="mt-1">Navn</label>
+        <label class="mt-1 mb-1">Navn</label>
         <input class="form-control me-2" v-model="name" type="text" placeholder="Navn">
 
-        <label class="mt-5">Telefon Nummer</label>
+        <label class="mt-3 mb-1">Telefon Nummer</label>
         <input class="form-control me-2" v-model="phoneNumber" type="text" placeholder="Telefon Nummer">
 
-        <label class="mt-5">Internasjonalt</label>
+        <label class="mt-3 mb-1">Internasjonalt</label>
         <input class="form-control me-2" v-model="international" type="text" placeholder="Internasjonalt">
 
-        <label class="mt-5">Last opp bilde</label>
+        <label class="mt-3 mb-1">Last opp bilde</label>
         <input class="form-control me-2" @change="setImage" type="file">
 
         <input class="btn btn-outline-success mt-3" type="button" value="Lagre firma"  @click="postCompany">
         
-    </section>
+    </div>
 </template>
 
-
 <script>
-import { reactive, toRefs  } from '@vue/reactivity'
-import companyService from '../../services/companyService.js'
-
+import { reactive, toRefs  } from '@vue/reactivity';
+import companyService from '../../services/companyService.js';
 
 export default {
     setup() {
 
         const image = new FormData();
-        
 
         const formCompany = reactive({
             name: "",
@@ -45,17 +43,16 @@ export default {
 
         let internationalBoolean = null;
 
-        
         const postCompany = () => {
 
             if (formCompany.name == "" || formCompany.phoneNumber == "" || formCompany.international == "" || formCompany.image == "") {
-                alert("Du må fylle alle feltene")
+                alert("Du må fylle alle feltene");
             } else {
 
                 // TELEFON NUMMER SJEKK
                 if (isNaN(parseInt(formCompany.phoneNumber))) {
-                    alert("Du må skrive tall i Telefon Nummer feltet")
-                    return -1
+                    alert("Du må skrive tall i Telefon Nummer feltet");
+                    return -1;
                 }
 
                 // INTERNASJONAL SJEKK 
@@ -64,8 +61,8 @@ export default {
                 } else if (formCompany.international.toUpperCase() == "NEI") {
                     internationalBoolean = false; 
                 } else {
-                    alert("Du må skrive ja eller nei i internasjonal feltet")
-                    return -1
+                    alert("Du må skrive ja eller nei i internasjonal feltet");
+                    return -1;
                 }
 
                 const newCompany = {
@@ -75,7 +72,7 @@ export default {
                     image: formCompany.image
                 }
 
-                companyService.postCompany(newCompany, image)
+                companyService.postCompany(newCompany, image);
                 
             }
 
@@ -84,7 +81,7 @@ export default {
         return {
             postCompany, 
             setImage,
-            ...toRefs(formCompany),
+            ...toRefs(formCompany)
         }
 
     },

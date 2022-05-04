@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import developerService from '../../services/developerService.js'
-import DeveloperItem from './DeveloperItem.vue'
+import developerService from '../../services/developerService.js';
+import DeveloperItem from './DeveloperItem.vue';
 
 export default {
     setup() {

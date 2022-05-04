@@ -12,6 +12,7 @@ const assignmentService = ( function(){
         },
     ]);
 
+
     const assignmentControllerUrl = "https://localhost:7287/api/assignment";
 
 
@@ -40,7 +41,7 @@ const assignmentService = ( function(){
         if (request.data.length != 0 ) {
             assignments.value = request.data;
         } else {
-            alert("Det finnes ingen oppdrag med den kategorien")
+            alert("Det finnes ingen oppdrag med den kategorien");
         }
         
     }
@@ -65,7 +66,7 @@ const assignmentService = ( function(){
             assignments.value = [];
             assignments.value.push(request.data);
         } else {
-            alert("Det finnes ingen oppdrag med den id-en")
+            alert("Det finnes ingen oppdrag med den id-en");
         }
     }
 
@@ -88,12 +89,13 @@ const assignmentService = ( function(){
         if (request.data.length != 0) {
             return request.data;
         } else {
-            alert("Det finnes ingen oppdrag med den id-en")
+            alert("Det finnes ingen oppdrag med den id-en");
         }
         
     }
 
 
+    // ENDRE ETT OPPDRAG
     const putAssignment = async (editedAssignment) => {
 
         await axios.put(assignmentControllerUrl, editedAssignment);
@@ -107,7 +109,9 @@ const assignmentService = ( function(){
         assignments.value[index].company = editedAssignment.company;
     }
 
+
     const getAll = () => assignments;
+    
 
     return {
         getAll,

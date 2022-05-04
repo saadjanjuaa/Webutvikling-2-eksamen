@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import assignmentService from '../../services/assignmentService.js'
-import AssignmentItem from './AssignmentItem.vue'
+import assignmentService from '../../services/assignmentService.js';
+import AssignmentItem from './AssignmentItem.vue';
 
 export default {
     setup() {

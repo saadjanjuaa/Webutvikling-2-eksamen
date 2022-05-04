@@ -8,11 +8,11 @@
 
 </template>
 
-
 <script>
+import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import PageHeader from './components/shared/PageHeader.vue'
+import PageHeader from './components/shared/PageHeader.vue';
 
 export default {
 	name: 'App',
@@ -21,7 +21,6 @@ export default {
 	}
 }
 </script>
-
 
 <style>
 

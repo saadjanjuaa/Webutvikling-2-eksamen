@@ -1,5 +1,6 @@
 <template>
-    <section class="mt-5">
+    <div class="mt-4 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        
         <h3>Endre ett oppdrag</h3>
 
         <label>Id</label>
@@ -8,29 +9,28 @@
             <input class="btn btn-outline-primary" @click="getAssignment" type="button" value="Hent">
         </div>
 
-        <label class="mt-3">Tekst</label>
-        <input class="form-control me-2" v-model="description" type="text">
+        <label class="mt-3 mb-1">Tekst</label>
+        <textarea class="form-control me-2" v-model="description" rows="3"></textarea>
 
-        <label class="mt-3">Kategori</label>
+        <label class="mt-3 mb-1">Kategori</label>
         <input class="form-control me-2" v-model="category" type="text">
-
-        <label class="mt-3">Firma</label>
+ 
+        <label class="mt-3 mb-1">Firma</label>
         <input class="form-control me-2" v-model="company" type="text">
-
 
         <input class="btn btn-outline-success mt-3" @click="changeAssignment" type="button" value="Lagre endringer">
 
-    </section>
+    </div>
 </template>
 
 <script>
-import { reactive, toRefs} from 'vue'
-import assignmentService from '../../services/assignmentService.js'
+import { reactive, toRefs } from 'vue';
+import assignmentService from '../../services/assignmentService.js';
 
 export default {
     setup() {
 
-         const assignmentForm = reactive({
+        const assignmentForm = reactive({
             id: "",
             description: "",
             category: "",
@@ -46,13 +46,12 @@ export default {
             assignmentForm.company = assignment.company;
         }
 
-
         const changeAssignment = async () => {
 
             if (assignmentForm.id == "") {
-                alert("Du må hente inn en id først")
+                alert("Du må hente inn en id først");
             } else if (isNaN(assignmentForm.id)) {
-                alert("Du må skrive inn ett tall når du henter id")
+                alert("Du må skrive inn ett tall når du henter id");
             } else {
 
                 const editedAssignment = {

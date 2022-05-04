@@ -68,16 +68,4 @@ public class DeveloperController : ControllerBase
     }
 
 
-
-    // HENTE DEVELOPERS UTIFRA JUNIOR ELLER IKKE
-    /*
-    [HttpGet]
-    [Route("[action]")]
-    public async Task<List<Developer>> GetJuniors()
-    {
-        List<Developer> developers = await _context.Developers.Where( _developer => _developer.Junior == true).ToListAsync();
-        return developers;
-    }*/
-
-
 }

@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import companyService from '../../services/companyService.js'
-import CompanyItem from './CompanyItem.vue'
+import companyService from '../../services/companyService.js';
+import CompanyItem from './CompanyItem.vue';
 
 export default {
     setup() {
