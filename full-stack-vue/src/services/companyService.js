@@ -31,9 +31,26 @@ const companyService = ( function(){
 
     // SØKE PÅ ID
     const getById = async (id) => {
-        const request = await axios.get(companyControllerUrl + `/GetById/${id}`);
-        companies.value = [];
-        companies.value.push(request.data);
+
+        if (id == "") {
+            alert("Feltet er tomt, du må skrive inn en id");
+            return -1;
+        } 
+        
+        if (isNaN(parseInt(id))) {
+            alert("Du må skrive inn ett tall");
+            return -1;
+        } 
+
+        const request = await axios.get(companyControllerUrl + `/GetById/${parseInt(id)}`);
+
+        if (request.data.length != 0) {
+            companies.value = [];
+            companies.value.push(request.data);
+        } else {
+            alert("Det finnes ingen firmaer med den id-en")
+        }
+        
     }
 
 
@@ -56,15 +73,40 @@ const companyService = ( function(){
     
     // SLETTE EN UTVIKLER
     const deleteCompany = async (companyToDeleteId) => {
-        await axios.delete(companyControllerUrl + `/Delete/${companyToDeleteId}`);
-        const request = await axios.get(companyControllerUrl);
-        companies.value = request.data;
+
+        if (companyToDeleteId == "") {
+            alert("Feltet er tomt, du må skrive inn en id")
+            return -1;
+        }
+
+        if (isNaN(parseInt(companyToDeleteId))) {
+            alert("Du må skrive inn ett tall");
+            return -1;
+        }
+
+        const requestId = await axios.get(companyControllerUrl + `/GetById/${parseInt(companyToDeleteId)}`);
+
+
+        if (requestId.data.length != 0) {
+            await axios.delete(companyControllerUrl + `/Delete/${parseInt(companyToDeleteId)}`)
+            const request = await axios.get(companyControllerUrl);
+            companies.value = request.data;
+        } else {
+            alert("Det finnes ingen firmaer med den id-en")
+        }
+
     }
 
 
     const getAll = () => companies;
 
-    return {getAll, postCompany, getById, getTotalCompanies, deleteCompany}
+    return {
+        getAll,
+        postCompany,
+        getById,
+        getTotalCompanies,
+        deleteCompany
+    }
 
 
 }() );

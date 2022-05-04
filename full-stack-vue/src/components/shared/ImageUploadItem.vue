@@ -26,7 +26,7 @@ export default {
 
         return {
             setImage,
-            postImage,
+            postImage
         }
 
 

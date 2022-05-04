@@ -36,29 +36,23 @@ export default {
         let id = ref("");
         let category = ref("");
 
-
         const searchById = () => {
 
-            if (id.value == "") {
-                alert("Feltet er tomt, du må skrive inn en id")
-            } else {
-                assignmentService.getById(parseInt(id.value))
-            }
-
+            assignmentService.getById(id.value);
         }
 
 
         const searchByCategory = () => {
 
-            if (category.value == "") {
-                alert("Feltet er tomt, du må skrive inn en kategori")
-            } else {
-                assignmentService.getByCategory(category.value);
-            }
-
+            assignmentService.getByCategory(category.value);
         }
 
-        return {id, searchById, searchByCategory, category}
+        return {
+            id,
+            searchById,
+            searchByCategory, 
+            category
+        }
         
     },
     components: {

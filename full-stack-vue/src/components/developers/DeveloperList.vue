@@ -26,7 +26,9 @@ export default {
         
         const developers = developerService.getAll();
 
-        return {developers}
+        return {
+            developers
+        }
     },
     components: {
         DeveloperItem

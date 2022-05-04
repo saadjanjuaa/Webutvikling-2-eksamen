@@ -25,7 +25,9 @@ export default {
         
         const companies = companyService.getAll();
 
-        return {companies}
+        return {
+            companies
+        }
     },
     components: {
         CompanyItem

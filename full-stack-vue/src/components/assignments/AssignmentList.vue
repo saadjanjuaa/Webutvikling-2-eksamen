@@ -24,7 +24,9 @@ export default {
         
         const assignments = assignmentService.getAll();
 
-        return {assignments}
+        return {
+            assignments
+        }
     },
     components: {
         AssignmentItem

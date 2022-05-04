@@ -37,27 +37,21 @@ export default {
         let role = ref("");
         
         const searchByName = () => {
-            
-            if (name.value == "") {
-                alert("Feltet er tomt, du må skrive inn ett navn")
-            } else {
-                developerService.getByName(name.value);
-            }
-            
+
+            developerService.getByName(name.value);
         }
 
         const searchByRole = () => {
 
-            if (role.value == "") {
-                alert("Feltet er tomt, du må skrive inn en rolle")
-            } else {
-                developerService.getByRole(role.value);
-            }
-
+            developerService.getByRole(role.value);
         }
 
-
-        return {searchByName, name, searchByRole, role}
+        return {
+            searchByName,
+            name, 
+            searchByRole, 
+            role
+        }
 
     },
     components: {

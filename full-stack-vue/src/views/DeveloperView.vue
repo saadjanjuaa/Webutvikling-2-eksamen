@@ -1,10 +1,10 @@
 <template>
 
     <section>
-      <h2 class="mt-5" data-aos="fade-right">Utviklere</h2>
-      <search-developer-item></search-developer-item>
-      <delete-developer-item></delete-developer-item>
-      <developer-list></developer-list>
+        <h2 class="mt-5" data-aos="fade-right">Utviklere</h2>
+        <search-developer-item></search-developer-item>
+        <delete-developer-item></delete-developer-item>
+        <developer-list></developer-list>
     </section>
 
 </template>
@@ -15,10 +15,10 @@ import SearchDeveloperItem from '../components/developers/SearchDeveloperItem.vu
 import DeleteDeveloperItem from '../components/developers/DeleteDeveloperItem.vue'
 
 export default {
-  components: {
-    DeveloperList,
-    SearchDeveloperItem,
-    DeleteDeveloperItem
-  }
+    components: {
+        DeveloperList,
+        SearchDeveloperItem,
+        DeleteDeveloperItem
+    }
 }
 </script>

@@ -32,12 +32,17 @@ const developerService = ( function(){
     // SØKE PÅ NAVN
     const getByName = async (name) => {
 
+        if (name == "") {
+            alert("Feltet er tomt, du må skrive inn ett navn");
+            return -1
+        }
+
         const request = await axios.get(developerControllerUrl + `/GetByName/${name}`);
 
         if (request.data.length != 0 ) {
             developers.value = request.data;
         } else {
-            alert("Det finnes ingen utviklere med det navnet")
+            alert("Det finnes ingen utviklere med det navnet");
         }
         
     }
@@ -45,12 +50,17 @@ const developerService = ( function(){
     // SØKE PÅ ROLLE
     const getByRole = async (role) => {
 
+        if (role == "") {
+            alert("Feltet er tomt, du må skrive inn en rolle");
+            return -1;
+        } 
+
         const request = await axios.get(developerControllerUrl + `/GetByRole/${role}`);
 
         if (request.data.length >= 1 ) {
             developers.value = request.data;
         } else {
-            alert("Det finnes ingen utviklere med den rollen")
+            alert("Det finnes ingen utviklere med den rollen");
         }
 
     }
@@ -58,28 +68,38 @@ const developerService = ( function(){
     // SLETTE EN UTVIKLER
     const deleteDeveloper = async (developerToDeleteId) => {
 
+        if (developerToDeleteId == "") {
+            alert("Feltet er tomt, du må skrive inn en id");
+            return -1;
+        } 
+
         if (isNaN(parseInt(developerToDeleteId))) {
             alert("Du må skrive inn ett tall");
             return -1;
         }
 
-        const requestId = await axios.get(developerControllerUrl + `/GetById/${developerToDeleteId}`);
+        const requestId = await axios.get(developerControllerUrl + `/GetById/${parseInt(developerToDeleteId)}`);
 
         if (requestId.data.length != 0) {
-            await axios.delete(developerControllerUrl + `/Delete/${developerToDeleteId}`)
+            await axios.delete(developerControllerUrl + `/Delete/${parseInt(developerToDeleteId)}`)
             const request = await axios.get(developerControllerUrl);
             developers.value = request.data;
 
         } else {
-            alert("Det finnes ingen utviklere med den id-en")
+            alert("Det finnes ingen utviklere med den id-en");
         }
         
     }
 
-
     const getAll = () => developers;
 
-    return {getAll, getByName, getByRole, deleteDeveloper, getTotalDevelopers}
+    return {
+        getAll,
+        getByName,
+        getByRole,
+        deleteDeveloper,
+        getTotalDevelopers
+    }
 
 
 }() );

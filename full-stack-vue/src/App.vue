@@ -5,7 +5,7 @@
 	<div class="container">
 		<router-view></router-view>
 	</div>
-  
+
 </template>
 
 
@@ -16,26 +16,26 @@ import PageHeader from './components/shared/PageHeader.vue'
 
 export default {
 	name: 'App',
-  components: {
-    PageHeader,
-  }
+	components: {
+		PageHeader,
+	}
 }
 </script>
 
 
 <style>
 
-@font-face {
-  font-family: circularStd;
-	src: url(@/assets/CircularStd-Medium.ttf);
-}
+	@font-face {
+		font-family: circularStd;
+		src: url(@/assets/CircularStd-Medium.ttf);
+	}
 
-* {
-  font-family: circularStd;
-}
+	* {
+		font-family: circularStd;
+	}
 
-h2 {
-	font-size: 3rem;
-}
+	h2 {
+		font-size: 3rem;
+	}
 
 </style>

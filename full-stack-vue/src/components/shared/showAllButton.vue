@@ -10,8 +10,9 @@ export default {
 
         const showAll = () => location.reload();   
 
-        return {showAll}
-
+        return {
+            showAll
+        }
     }
 }
 </script>

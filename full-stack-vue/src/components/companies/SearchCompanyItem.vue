@@ -26,11 +26,7 @@ export default {
 
         const searchById = () => {
 
-            if (id.value == "") {
-                alert("Feltet er tomt, du må skrive inn en id")
-            } else {
-                companyService.getById(parseInt(id.value))
-            }
+            companyService.getById(id.value);
 
         }
 

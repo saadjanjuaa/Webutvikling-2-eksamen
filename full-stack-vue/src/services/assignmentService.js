@@ -29,23 +29,68 @@ const assignmentService = ( function(){
     
     // SØKE PÅ KATEGORI
     const getByCategory = async (category) => {
+
+        if (category == "") {
+            alert("Feltet er tomt, du må skrive inn en kategori");
+            return -1;
+        }
+        
         const request = await axios.get(assignmentControllerUrl + `/GetByCategory/${category}`);
-        assignments.value = request.data;
+
+        if (request.data.length != 0 ) {
+            assignments.value = request.data;
+        } else {
+            alert("Det finnes ingen oppdrag med den kategorien")
+        }
+        
     }
 
 
     // HENTE PÅ ID FOR Å SØKE PÅ ID
     const getById = async (id) => {
-        const request = await axios.get(assignmentControllerUrl + `/GetById/${id}`);
-        assignments.value = [];
-        assignments.value.push(request.data);
+
+        if (id == "") {
+            alert("Feltet er tomt, du må skrive inn en id");
+            return -1;
+        } 
+
+        if (isNaN(parseInt(id))) {
+            alert("Du må skrive inn ett tall");
+            return -1;
+        }
+
+        const request = await axios.get(assignmentControllerUrl + `/GetById/${parseInt(id)}`);
+
+        if (request.data.length != 0) {
+            assignments.value = [];
+            assignments.value.push(request.data);
+        } else {
+            alert("Det finnes ingen oppdrag med den id-en")
+        }
     }
 
 
     // HENTE INFO OM ETT OPPDRAG
     const getInfoById = async (id) => {
-        const request = await axios.get(assignmentControllerUrl + `/GetById/${id}`);
-        return request.data;
+
+        if (id == "") {
+            alert("Feltet er tomt, du må skrive inn en id");
+            return -1;
+        } 
+
+        if (isNaN(parseInt(id))) {
+            alert("Du må skrive inn ett tall");
+            return -1;
+        }
+
+        const request = await axios.get(assignmentControllerUrl + `/GetById/${parseInt(id)}`);
+
+        if (request.data.length != 0) {
+            return request.data;
+        } else {
+            alert("Det finnes ingen oppdrag med den id-en")
+        }
+        
     }
 
 
@@ -62,10 +107,16 @@ const assignmentService = ( function(){
         assignments.value[index].company = editedAssignment.company;
     }
 
-
     const getAll = () => assignments;
 
-    return {getAll, getById, putAssignment, getByCategory, getInfoById, getTotalAssignments}
+    return {
+        getAll,
+        getById,
+        putAssignment,
+        getByCategory,
+        getInfoById,
+        getTotalAssignments
+    }
 
 
 }() );

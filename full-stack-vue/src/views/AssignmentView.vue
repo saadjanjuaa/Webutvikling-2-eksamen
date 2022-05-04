@@ -1,10 +1,10 @@
 <template>
 
     <section>
-      <h2 class="mt-5" data-aos="fade-right">Oppdrag</h2>
-      <search-assignment-item></search-assignment-item>
-      <edit-assignment-item></edit-assignment-item>
-      <assignment-list></assignment-list>
+        <h2 class="mt-5" data-aos="fade-right">Oppdrag</h2>
+        <search-assignment-item></search-assignment-item>
+        <edit-assignment-item></edit-assignment-item>
+        <assignment-list></assignment-list>
     </section>
 
 </template>
@@ -16,10 +16,10 @@ import EditAssignmentItem from '../components/assignments/EditAssignmentItem.vue
 
 
 export default {
-  components: {
-    SearchAssignmentItem,
-    AssignmentList,
-    EditAssignmentItem
-  }
+    components: {
+        SearchAssignmentItem,
+        AssignmentList,
+        EditAssignmentItem
+    }
 }
 </script>

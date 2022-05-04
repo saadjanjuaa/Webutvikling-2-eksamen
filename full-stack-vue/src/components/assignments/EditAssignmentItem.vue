@@ -39,11 +39,6 @@ export default {
 
         const getAssignment = async () => {
 
-            if (assignmentForm.id == "") {
-                alert("Feltet er tomt, du må skrive inn en id")
-                return -1;
-            }
-
             const assignment = await assignmentService.getInfoById(assignmentForm.id);
 
             assignmentForm.description = assignment.description;
@@ -56,6 +51,8 @@ export default {
 
             if (assignmentForm.id == "") {
                 alert("Du må hente inn en id først")
+            } else if (isNaN(assignmentForm.id)) {
+                alert("Du må skrive inn ett tall når du henter id")
             } else {
 
                 const editedAssignment = {
